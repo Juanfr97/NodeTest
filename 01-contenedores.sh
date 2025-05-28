@@ -37,3 +37,22 @@ docker container run --name=TestAPI -d -p 3001:3000 test-api:1.0
 
 # Crear instancia de MYSQL
 docker container run --name=Mysql1 -e MYSQL_ROOT_PASSWORD=123456 -d -p 3307:3306 mysql
+
+# Para publicar
+docker push <usuario>/<repo>
+
+# Loguearse a docker hub
+docker login -u <su usuario> -p "<su contraseña>"
+
+#Crear imagen
+docker build -t juanfr97/node-test:1.0 .
+
+git init
+
+git add .
+
+git commit -m "Initial commit"
+
+git remote add origin https://github.com/Juanfr97/NodeTest.git
+
+git push origin main o master

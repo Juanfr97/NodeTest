@@ -17,6 +17,7 @@ docker container run --name MySQLDB \
  # Bind Volumes
  docker container run --name MySQLDB \
  -e MYSQL_ROOT_PASSWORD=1 \
+ -e MYSQL_ROOT_PASSWORD=1 \
  -v ./data:/var/lib/mysql \
  -p 3310:3306 \
  -d mysql
